@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header, .footer {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.container {
+    outline: 2px solid #b2bec3;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 6.25%;
+    height: 6.25%;
+}
+
+.grid-item:hover {
+    background-color: #2d3436;
+}
