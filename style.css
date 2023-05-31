@@ -1,25 +1,64 @@
+:root {
+    --size: 6.25%;
+}
+
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     overflow: visible;
+    height: 100%;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    color: #2d3436;
 }
 
 .header, .footer {
     text-align: center;
+    flex-grow: 0;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 80px;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 9%;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 100%;
+    gap: 45px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #74b9ff;
+    border-radius: 8px;
+    font-size: 24px;
+    width: 75%;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f8f8f8;
+    border: 2px solid #0984e3;
+    transform: scale(1.05);
 }
 
 .container {
@@ -31,10 +70,14 @@ h1 {
 }
 
 .grid-item {
-    width: 6.25%;
-    height: 6.25%;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for variables */
+    width: var(--size);
+    height: var(--size);
 }
 
-.grid-item:hover {
-    background-color: #2d3436;
+.active {
+    background-color: black;
+}
+
+.footer {
 }
