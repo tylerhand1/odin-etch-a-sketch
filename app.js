@@ -35,7 +35,7 @@ function changeColor(e) {
     if(e.type === 'mouseover' && !mouseDown) {
         return;
     }
-    
+
     if(setActive) {
         e.target.classList.add('active');
     } else {
@@ -47,7 +47,6 @@ function changeSize() {
     let size = 0;
     do {
         size = Number.parseInt(prompt("Enter a size between 1 and 100"));
-        console.log(size)
     } while((size <= 0 || size > 100) && size !== null);
     setupGrid(size);
 }
